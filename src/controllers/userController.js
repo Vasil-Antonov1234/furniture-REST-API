@@ -12,6 +12,8 @@ userController.post("/register", async (req, res) => {
 });
 
 userController.post("/login", (req, res) => {
+    const userData = req.body;
+    
     res.end();
 });
 
