@@ -12,8 +12,8 @@
 
  ## Authentication and Authorization
  - [x] Create user controller
- - [ ] Add json parser
- - [ ] Add register endpoint
+ - [x] Add json parser
+ - [x] Add register endpoint
  - [ ] Add and config database `npm i mongoose`
  - [ ] Add user model
  - [ ] Add user service with register method
