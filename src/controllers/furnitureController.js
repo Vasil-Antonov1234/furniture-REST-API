@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const furnitureController = Router();
 
-furnitureController.get("/data/catalog", (req, res) => {
+furnitureController.get("/", (req, res) => {
     res.json([]);
 })
 
