@@ -14,9 +14,9 @@
  - [x] Create user controller
  - [x] Add json parser
  - [x] Add register endpoint
- - [ ] Add and config database `npm i mongoose`
- - [ ] Add user model
- - [ ] Add user service with register method
+ - [x] Add and config database `npm i mongoose`
+ - [x] Add user model
+ - [x] Add user service with register method
  - [ ] Install bcrypt
  - [ ] Hash password on register
  - [ ] Add login endpoint and service
