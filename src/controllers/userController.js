@@ -6,14 +6,23 @@ const userController = Router();
 userController.post("/register", async (req, res) => {
     const userData = req.body;
 
-    const result =  await userService.register(userData.email, userData.password);
+    const result = await userService.register(userData.email, userData.password);
 
     res.status(201).end();
 });
 
-userController.post("/login", (req, res) => {
+userController.post("/login", async (req, res) => {
     const userData = req.body;
-    
+
+    try {
+        const result = await userService.login(userData.email, userData.password);
+
+        res.status(201).json(result);
+    } catch (error) {
+        // Extract error message
+        res.status(401).json({message: error.message});
+    }
+
     res.end();
 });
 
