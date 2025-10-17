@@ -11,7 +11,7 @@
  - [x] Add furniture controller
 
  ## Authentication and Authorization
- - [ ] Create user controller
+ - [x] Create user controller
  - [ ] Add json parser
  - [ ] Add register endpoint
  - [ ] Add and config database `npm i mongoose`

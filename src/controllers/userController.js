@@ -2,11 +2,13 @@ import { Router } from "express";
 
 const userController = Router();
 
-userController.put("/register", (req, res) => {
+userController.post("/register", (req, res) => {
+    const userData = req.body;
+
     res.end();
 });
 
-userController.put("/login", (req, res) => {
+userController.post("/login", (req, res) => {
     res.end();
 });
 
