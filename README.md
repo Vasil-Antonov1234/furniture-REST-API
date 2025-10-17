@@ -17,8 +17,8 @@
  - [x] Add and config database `npm i mongoose`
  - [x] Add user model
  - [x] Add user service with register method
- - [ ] Install bcrypt
- - [ ] Hash password on register
+ - [x] Install bcrypt
+ - [x] Hash password on register
  - [ ] Add login endpoint and service
  - [ ] Verify login credentials
  - [ ] Generate and return token `npm i jsonwebtoken`
