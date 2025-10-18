@@ -22,8 +22,8 @@
  - [x] Add login endpoint and service
  - [x] Verify login credentials`
  - [x] Generate and return token `npm i jsonwebtoken`
- - [ ] Auto login after register
- - [ ] Create logout
+ - [x] Auto login after register
+ - [x] Create logout
  - [ ] Add auth middleware
 
  ## Bonus
