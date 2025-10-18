@@ -20,7 +20,7 @@
  - [x] Install bcrypt
  - [x] Hash password on register
  - [x] Add login endpoint and service
- - [x] Verify login credentials
+ - [x] Verify login credentials`
  - [x] Generate and return token `npm i jsonwebtoken`
  - [ ] Auto login after register
  - [ ] Create logout

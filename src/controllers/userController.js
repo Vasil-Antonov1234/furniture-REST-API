@@ -8,7 +8,7 @@ userController.post("/register", async (req, res) => {
 
     const result = await userService.register(userData.email, userData.password);
 
-    res.status(201).end();
+    res.status(201).json(result);
 });
 
 userController.post("/login", async (req, res) => {
