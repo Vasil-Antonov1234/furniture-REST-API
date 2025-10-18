@@ -24,7 +24,7 @@
  - [x] Generate and return token `npm i jsonwebtoken`
  - [x] Auto login after register
  - [x] Create logout
- - [ ] Add auth middleware
+ - [x] Add auth middleware
 
  ## Bonus
  - [x] Use env variables `npm i dotenv`
