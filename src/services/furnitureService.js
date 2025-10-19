@@ -6,7 +6,7 @@ export default {
             description: true,
             price: true,
             img: true,
-        })
+        });
     },
     getByiD(furnitureId) {
         return Furniture.findById(furnitureId);
@@ -20,7 +20,7 @@ export default {
     update(furnitureId, furnitureData) {
         return Furniture.findByIdAndUpdate(furnitureId, furnitureData, { runValidators: true });
     },
-    delleteById(furnitureId) {
-        return Furniture.findByIdAndDelete(furnitureId);
+    delleteById(furnitureId, userId) {
+        return Furniture.deleteOne({ id: furnitureId, _ownerId:userId });
     }
 }

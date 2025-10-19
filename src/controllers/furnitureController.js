@@ -37,6 +37,8 @@ furnitureController.put("/:furnitureId", async (req, res) => {
     const furnitureData = req.body;
     const furnitureId = req.params.furnitureId;
 
+    // Todo validate user
+
     try {
         const furniture = await furnitureService.update(furnitureId, furnitureData);
         res.status(201).json(furniture);
@@ -47,10 +49,15 @@ furnitureController.put("/:furnitureId", async (req, res) => {
 
 furnitureController.delete("/:furnitureId", async (req, res) => {
     const furnitureId = req.params.furnitureId;
+    const userId = req.user.id;
 
-    const furniture = await furnitureService.delleteById(furnitureId);
-
-    res.json(furniture);
+    try {
+        const furniture = await furnitureService.delleteById(furnitureId, userId);
+        res.json(furniture);
+    } catch (error) {
+        res.json({ error: error.message });
+    };
+    
 });
 
 export default furnitureController;
