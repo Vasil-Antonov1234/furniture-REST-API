@@ -4,7 +4,7 @@
   "description": "- [x] Create Repository",
   "main": "index.js",
   "scripts": {
-    "dev": " node --watch src/index.js"
+    "dev": "node --watch src/index.js"
   },
   "keywords": [],
   "author": "",

@@ -26,5 +26,17 @@
  - [x] Create logout
  - [x] Add auth middleware
 
+ ## Furniture Endpoints
+ - [x] Add furniture model
+ - [ ] Add furniture service
+ - [ ] Create furniture endpoint
+ - [ ] Get all furnitures
+ - [ ] Select only needed information for catalog
+ - [ ] Create details endpoint
+ - [ ] Add owner relation to furniture model
+ - [ ] Edit furniture endpoint
+ - [ ] Delete furniture endpoint
+ - [ ] Filter furniture by userId
+
  ## Bonus
  - [x] Use env variables `npm i dotenv`
