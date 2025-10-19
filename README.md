@@ -32,8 +32,8 @@
  - [x] Create furniture endpoint
  - [x] Get all furnitures
  - [x] Select only needed information for catalog
- - [ ] Create details endpoint
- - [ ] Add owner relation to furniture model
+ - [x] Create details endpoint
+ - [x] Add owner relation to furniture model
  - [ ] Edit furniture endpoint
  - [ ] Delete furniture endpoint
  - [ ] Filter furniture by userId

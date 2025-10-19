@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 
 const furnitureSchema = new Schema({
     make: {
@@ -31,7 +31,11 @@ const furnitureSchema = new Schema({
         type: String,
         required: [true, "Image url is required!"],
     },
-    material: String
+    material: String,
+    _ownerId: {
+        type: Types.ObjectId,
+        ref: "User"
+    }
 });
 
 const Furniture = model("Furniture", furnitureSchema);

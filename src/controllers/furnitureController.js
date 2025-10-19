@@ -12,9 +12,10 @@ furnitureController.get("/", async (req, res) => {
 furnitureController.post("/", async (req, res) => {
 
     const furnitureData = req.body;
+    const ownerId = req.user.id;
 
     try {
-        const furniture = await furnitureService.create(furnitureData);
+        const furniture = await furnitureService.create(furnitureData, ownerId);
         res.status(201).json(furniture);
     } catch (error) {
         return { error: error.message }
@@ -30,7 +31,8 @@ furnitureController.get("/:furnitureId", async (req, res) => {
     } catch (error) {
         res.status(400).json({ error: error.message });
     };
+});
 
-})
+// furnitureController.put("/:furnitureId")
 
 export default furnitureController;
