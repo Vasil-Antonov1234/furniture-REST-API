@@ -36,7 +36,7 @@
  - [x] Add owner relation to furniture model
  - [x] Edit furniture endpoint
  - [x] Delete furniture endpoint
- - [ ] Filter furniture by userId
+ - [x] Filter furniture by userId
 
  ## Error handling 
  - [ ] Create error util for message

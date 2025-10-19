@@ -1,10 +1,19 @@
 import { Router } from "express";
 import furnitureService from "../services/furnitureService.js";
+import queristring from "querystring";
 
 const furnitureController = Router();
 
 furnitureController.get("/", async (req, res) => {
-    const furnitures = await furnitureService.getAll();
+    const query = req.query.where?.replaceAll('"', '');
+    let filter = {};
+
+    if (query) {
+        filter = queristring.parse(query);
+    };
+
+    // const filter = req.url.split("%22").at(1);   
+    const furnitures = await furnitureService.getAll(filter);
 
     res.json(furnitures || []);
 });
