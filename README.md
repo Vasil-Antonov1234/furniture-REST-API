@@ -28,7 +28,7 @@
 
  ## Furniture Endpoints
  - [x] Add furniture model
- - [ ] Add furniture service
+ - [x] Add furniture service
  - [ ] Create furniture endpoint
  - [ ] Get all furnitures
  - [ ] Select only needed information for catalog
