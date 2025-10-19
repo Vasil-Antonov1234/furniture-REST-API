@@ -4,6 +4,7 @@ import routes from "../routes.js";
 import mongoose from "mongoose";
 import "dotenv/config";
 import { authMiddleware } from "./middlewares/authMiddleware.js";
+import { errorHandler } from "./middlewares/errorHandlerMiddleware.js";
 
 const app = express();
 
@@ -34,5 +35,8 @@ app.get("/", (req, res) => {
 
 // Add routes
 app.use(routes);
+
+// Add global error handler
+app.use(errorHandler);
 
 app.listen(3030, () => console.log("Server is listening on http://localhost:3030..."));
