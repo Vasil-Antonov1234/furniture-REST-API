@@ -34,7 +34,7 @@
  - [x] Select only needed information for catalog
  - [x] Create details endpoint
  - [x] Add owner relation to furniture model
- - [ ] Edit furniture endpoint
+ - [x] Edit furniture endpoint
  - [ ] Delete furniture endpoint
  - [ ] Filter furniture by userId
 
