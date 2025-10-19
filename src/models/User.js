@@ -9,7 +9,8 @@ const userSchema = new Schema({
     
     password: {
         type: String,
-        required: [true, "Password is reqiured!"]
+        required: [true, "Password is reqiured!"],
+        minLength: [7, "Password is too short!"]
     }
 });
 

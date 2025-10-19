@@ -40,7 +40,7 @@ furnitureController.get("/:furnitureId", async (req, res) => {
         const furniture = await furnitureService.getByiD(furnitureId);
         res.status(200).json(furniture);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(400).json({ message: getErrorMessage(error) });
     };
 });
 
@@ -54,7 +54,7 @@ furnitureController.put("/:furnitureId", async (req, res) => {
         const furniture = await furnitureService.update(furnitureId, furnitureData);
         res.status(201).json(furniture);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(400).json({ message: getErrorMessage(error) });
     };
 });
 
@@ -66,7 +66,7 @@ furnitureController.delete("/:furnitureId", async (req, res) => {
         const furniture = await furnitureService.delleteById(furnitureId, userId);
         res.json(furniture);
     } catch (error) {
-        res.json({ error: error.message });
+        res.json({ message: getErrorMessage(error) });
     };
     
 });

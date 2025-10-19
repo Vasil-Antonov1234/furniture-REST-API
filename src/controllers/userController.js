@@ -1,14 +1,20 @@
 import { Router } from "express";
 import userService from "../services/userService.js";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 const userController = Router();
 
 userController.post("/register", async (req, res) => {
     const userData = req.body;
 
-    const result = await userService.register(userData.email, userData.password);
+    try {
+        const result = await userService.register(userData.email, userData.password);
+        
+        res.status(201).json(result);
 
-    res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ message: getErrorMessage(error) });
+    };
 });
 
 userController.post("/login", async (req, res) => {
@@ -19,16 +25,13 @@ userController.post("/login", async (req, res) => {
 
         res.status(201).json(result);
     } catch (error) {
-        // Extract error message
-        res.status(401).json({message: error.message});
+        res.status(401).json({ message: getErrorMessage(error) });
     }
-
-    res.end();
 });
 
 userController.get("/logout", (req, res) => {
-    
-    res.status(204).json({ok: true});
+
+    res.status(204).json({ ok: true });
 });
 
 export default userController;

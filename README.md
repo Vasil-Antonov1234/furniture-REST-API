@@ -39,7 +39,7 @@
  - [x] Filter furniture by userId
 
  ## Error handling 
- - [ ] Create error util for message
+ - [x] Create error util for message
  - [ ] Global error handler
 
  ## Bonus
