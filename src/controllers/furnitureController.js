@@ -1,6 +1,7 @@
 import { Router } from "express";
 import furnitureService from "../services/furnitureService.js";
 import queristring from "querystring";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 const furnitureController = Router();
 
@@ -27,8 +28,9 @@ furnitureController.post("/", async (req, res) => {
         const furniture = await furnitureService.create(furnitureData, ownerId);
         res.status(201).json(furniture);
     } catch (error) {
-        return { error: error.message }
-    }
+        console.log(getErrorMessage(error));
+        res.status(400).json({ message: getErrorMessage(error) });
+    };
 });
 
 furnitureController.get("/:furnitureId", async (req, res) => {
