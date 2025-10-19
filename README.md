@@ -30,8 +30,8 @@
  - [x] Add furniture model
  - [x] Add furniture service
  - [x] Create furniture endpoint
- - [ ] Get all furnitures
- - [ ] Select only needed information for catalog
+ - [x] Get all furnitures
+ - [x] Select only needed information for catalog
  - [ ] Create details endpoint
  - [ ] Add owner relation to furniture model
  - [ ] Edit furniture endpoint
