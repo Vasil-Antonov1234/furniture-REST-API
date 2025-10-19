@@ -44,3 +44,5 @@
 
  ## Bonus
  - [x] Use env variables `npm i dotenv`
+ - [x] Build with vite
+ - [x] Refactor services

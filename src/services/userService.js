@@ -2,8 +2,8 @@ import User from "../models/User.js"
 import bcrypt from "bcrypt";
 import generateAuthToken from "../utils/tokenUtils.js";
 
-export default {
-    async register(email, password) {
+
+    export async function register(email, password) {
         const user = await User.create({ email, password });
         const token = generateAuthToken(user);
 
@@ -12,9 +12,9 @@ export default {
             email: user.email,
             accessToken: token
         };
-    },
+    };
 
-    async login(email, password) {
+    export async function login(email, password) {
         const user = await User.findOne({email});
 
         if (!user) {
@@ -34,5 +34,4 @@ export default {
             email: user.email,
             accessToken: token
         };
-    }
-}
+    };
