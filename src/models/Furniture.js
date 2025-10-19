@@ -27,11 +27,11 @@ const furnitureSchema = new Schema({
         required: [true, "Price is required!"],
         min: [0, "Price must be a positive number!"]
     },
-    imageUrl: {
+    img: {
         type: String,
         required: [true, "Image url is required!"],
     },
-    Material: String
+    material: String
 });
 
 const Furniture = model("Furniture", furnitureSchema);
